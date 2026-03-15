@@ -1,4 +1,8 @@
 ---
+title: "Congrats on graduation in Polyu AMA"
+excerpt: "With TK (looks like a kidnap)<br/><img src='/images/polyu_with_tk.jpeg'>"
+collection: portfolio
+------
 title: "Tutorial in Dongguan, for the very first time"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/dongguan_rl_ta.jpeg'>"
 collection: portfolio
