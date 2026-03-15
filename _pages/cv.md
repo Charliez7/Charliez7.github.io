@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Data Science, City University of Hong Kong, 2027 (expected)
+* M.S. in the Hong Kong Polytechnic University, 2023
+* B.S. in Sichuan University, 2020
 
 Work experience
 ======
@@ -55,10 +55,15 @@ Talks
   
 Teaching
 ======
+* Teaching Assistant
+  * Reinforcement Learning and Dynamic Programming 
+  * Optimization
+  * Risk Analysis and Decision Making
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+<!-- Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
+
