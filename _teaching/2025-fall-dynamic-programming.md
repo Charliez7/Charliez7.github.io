@@ -6,5 +6,3 @@ permalink: /teaching/dynamic-programming-reinforcement-learning
 venue: "City University of Hong Kong"
 date: 2025-09-01
 ---
-
-Teaching Assistant for Dynamic Programming and Reinforcement Learning in Spring and Fall 2025.

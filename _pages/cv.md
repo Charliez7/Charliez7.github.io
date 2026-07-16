@@ -19,8 +19,16 @@ Education
 
 Publications and Working Papers
 ======
+**Conference Papers**
+
 <ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
+  {% if post.category == 'conferences' %}{% include archive-single-cv.html %}{% endif %}
+{% endfor %}</ul>
+
+**Working Papers**
+
+<ul>{% for post in site.publications reversed %}
+  {% if post.category == 'working_papers' %}{% include archive-single-cv.html %}{% endif %}
 {% endfor %}</ul>
   
 Academic Service

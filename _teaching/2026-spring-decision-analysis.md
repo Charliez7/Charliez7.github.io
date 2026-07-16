@@ -6,5 +6,3 @@ permalink: /teaching/decision-analysis-risk-management
 venue: "City University of Hong Kong"
 date: 2026-01-01
 ---
-
-Teaching Assistant for Decision Analysis and Risk Management.
