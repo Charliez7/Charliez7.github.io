@@ -1,20 +1,23 @@
 ---
 permalink: /
-title: "All About Yuqi"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Zha Yuqi received her Master's degree in Applied Mathematics for Science and Technology from The Hong Kong Polytechnic University in 2023 and her Bachelor's degree majored in Financial Engineering and minored in Software Engineering. She is currently pursuing a Ph.D. degree in Data Science at City University of Hong Kong, under the supervision of Prof. Chin Pang Ho.
+I am a PhD candidate in Data Science at City University of Hong Kong, advised by [Prof. Chin Pang Ho](https://www.cityu.edu.hk/stfprofile/ClintHo.htm). My research focuses on sequential decision-making under uncertainty, with an emphasis on reinforcement learning, robust optimization, and robust and risk-aware Markov decision processes.
 
-Her research interests include reinforcement learning, robust optimization, and interdisciplinary research.
+Before starting my PhD, I earned an MSc in Applied Mathematics for Science and Technology from The Hong Kong Polytechnic University and a bachelor's degree in Financial Engineering, with a minor in Software Engineering, from Sichuan University.
 
-Personal Interest
+Research Interests
 ======
-Currently, she has great obsession with Formula 1 racing, especially principled in George Russell. Good luck with GR63 with his WDC!
+* Reinforcement learning
+* Robust and risk-aware Markov decision processes
+* Robust optimization
+* Policy-gradient methods
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+Recent Work
+======
+My recent work studies policy-gradient methods for robust average-reward and risk-averse MDPs, regret minimization under model uncertainty, and gradient-based optimization methods for multimodal-model jailbreaking attacks. See the [Publications](/publications/) page for details.
