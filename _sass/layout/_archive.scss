@@ -90,6 +90,12 @@
    ========================================================================== */
 
 .list__item {
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(0.25rem);
+  }
+
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
   }
@@ -104,6 +110,16 @@
 
   .page__meta {
     margin: 0 0 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list__item {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 }
 

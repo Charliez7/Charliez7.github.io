@@ -34,6 +34,40 @@
   }
 }
 
+/* Use the space released when the author sidebar is hidden. */
+.main--wide {
+  .page,
+  .archive {
+    float: none;
+    width: 100%;
+    max-width: 68rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    animation: content-rise 0.45s ease-out both;
+  }
+}
+
+@keyframes content-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main--wide .page,
+  .main--wide .archive {
+    animation: none;
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;
