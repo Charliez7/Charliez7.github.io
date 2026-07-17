@@ -1,0 +1,92 @@
+---
+layout: single
+title: "Photos"
+permalink: /photos/
+author_profile: true
+---
+
+<p>A collection of moments from my academic and teaching journey.</p>
+
+<div class="photo-grid">
+  {% for photo in site.data.photos %}
+    <article class="photo-card">
+      {% if photo.related_url %}
+        <a class="photo-card__image-link" href="{{ photo.related_url | relative_url }}" aria-label="View related experience: {{ photo.related_label | escape }}">
+      {% endif %}
+          <img
+            class="photo-card__image"
+            src="{{ photo.image | relative_url }}"
+            alt="{{ photo.alt | escape }}"
+            loading="lazy"
+          >
+      {% if photo.related_url %}
+        </a>
+      {% endif %}
+
+      <div class="photo-card__body">
+        <p class="photo-card__meta">
+          <time datetime="{{ photo.date_iso }}">{{ photo.date }}</time>
+          {% if photo.location %}<span aria-hidden="true"> · </span>{{ photo.location }}{% endif %}
+        </p>
+        <h2 class="photo-card__title">{{ photo.title }}</h2>
+        <p>{{ photo.description }}</p>
+        {% if photo.related_url %}
+          <a class="photo-card__related" href="{{ photo.related_url | relative_url }}">
+            Related experience: {{ photo.related_label }}
+          </a>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<style>
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .photo-card {
+    overflow: hidden;
+    border: 1px solid var(--global-border-color);
+    border-radius: 0.5rem;
+    background: var(--global-bg-color);
+  }
+
+  .photo-card__image-link,
+  .photo-card__image {
+    display: block;
+  }
+
+  .photo-card__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  .photo-card__body {
+    padding: 1rem;
+  }
+
+  .photo-card__meta {
+    margin: 0 0 0.35rem;
+    color: var(--global-text-color-light);
+    font-size: 0.85em;
+  }
+
+  .photo-card__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.15em;
+  }
+
+  .photo-card__body > p:not(.photo-card__meta) {
+    margin: 0 0 0.75rem;
+  }
+
+  .photo-card__related {
+    font-weight: 600;
+  }
+</style>

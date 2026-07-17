@@ -1,0 +1,19 @@
+- image: /images/dongguan_rl_ta.jpg
+  alt: "Yuqi Zha explaining a dynamic programming derivation on a whiteboard"
+  title: "Teaching Dynamic Programming"
+  date: "January 2025"
+  date_iso: "2025-01"
+  location: "Dongguan, China"
+  description: "A tutorial session on dynamic programming and sequential decision-making."
+  related_url: /teaching/dynamic-programming-reinforcement-learning/
+  related_label: "Dynamic Programming and Reinforcement Learning"
+
+- image: /images/polyu_with_tk.jpg
+  alt: "Yuqi Zha celebrating her master's graduation at The Hong Kong Polytechnic University"
+  title: "MSc Graduation at PolyU"
+  date: "November 2023"
+  date_iso: "2023-11"
+  location: "Hong Kong"
+  description: "Celebrating the completion of my MSc in Applied Mathematics for Science and Technology."
+  related_url: /cv/#education
+  related_label: "Education"
