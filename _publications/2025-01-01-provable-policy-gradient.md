@@ -6,5 +6,5 @@ permalink: /publication/provable-policy-gradient
 date: 2025-01-01
 venue: "42nd International Conference on Machine Learning (ICML 2025)"
 excerpt: "Wang and Zha contributed equally."
-citation: 'Wang, Q. H.*, Zha, Y. Q.*, Ho, C. P., and Petrik, M. (2025). &quot;Provable Policy Gradient for Robust Average-Reward MDPs Beyond Rectangularity.&quot; <i>42nd International Conference on Machine Learning (ICML 2025)</i>. *Equal contribution.'
+authors: 'Wang, Q. H.*, <strong>Zha, Y. Q.</strong>*, Ho, C. P., and Petrik, M.'
 ---
