@@ -23,6 +23,9 @@ author_profile: false
           <time datetime="{{ photo.date_iso }}">{{ photo.date }}</time>
           {% if photo.location %}<span aria-hidden="true"> · </span>{{ photo.location }}{% endif %}
         </p>
+        {% if photo.description %}
+          <p class="photo-gallery__description">{{ photo.description }}</p>
+        {% endif %}
       </figcaption>
     </figure>
   {% endfor %}
@@ -67,10 +70,10 @@ author_profile: false
   }
 
   .photo-gallery__caption {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 0 1rem;
     margin-top: 0.65rem;
   }
 
@@ -81,11 +84,18 @@ author_profile: false
   }
 
   .photo-gallery__meta {
-    flex: 0 0 auto;
     margin: 0;
     color: var(--global-text-color-light);
     font-size: 0.82em;
     white-space: nowrap;
+  }
+
+  .photo-gallery__description {
+    grid-column: 1 / -1;
+    margin: 0.4rem 0 0;
+    color: var(--global-text-color-light);
+    font-size: 0.88em;
+    line-height: 1.55;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -110,12 +120,16 @@ author_profile: false
     }
 
     .photo-gallery__caption {
-      display: block;
+      grid-template-columns: 1fr;
     }
 
     .photo-gallery__meta {
       margin-top: 0.2rem;
       white-space: normal;
+    }
+
+    .photo-gallery__description {
+      grid-column: auto;
     }
   }
 </style>
