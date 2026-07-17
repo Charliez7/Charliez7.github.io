@@ -60,6 +60,20 @@
   }
 }
 
+.sidebar > [itemscope] {
+  padding: 0.9rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 1rem;
+  background:
+    linear-gradient(145deg, var(--global-glass-highlight), transparent 55%),
+    var(--global-glass-bg);
+  -webkit-backdrop-filter: saturate(160%) blur(18px);
+          backdrop-filter: saturate(160%) blur(18px);
+  box-shadow:
+    inset 0 1px 0 var(--global-glass-highlight),
+    0 0.75rem 2rem var(--global-glass-shadow);
+}
+
 .sidebar__right {
   margin-bottom: 1em;
 
@@ -254,7 +268,9 @@
   list-style-type: none;
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
-  background: var(--global-bg-color);
+  background: var(--global-glass-bg-strong);
+  -webkit-backdrop-filter: saturate(160%) blur(16px);
+          backdrop-filter: saturate(160%) blur(16px);
   z-index: -1;
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
