@@ -9,13 +9,32 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* **PhD in Data Science**, City University of Hong Kong, 2023-present. GPA: 3.71/4.3.
-* **MSc in Applied Mathematics for Science and Technology**, The Hong Kong Polytechnic University, 2021-2023. GPA: 4.15/4.3.
-* **Bachelor's degree**, Sichuan University, 2016-2020.
-  * Financial Engineering (major), GPA: 3.58/4.0.
-  * Software Engineering (minor), GPA: 3.53/4.0.
+<section class="cv-education">
+  <h1 id="education">Education</h1>
+  <ol class="cv-education__timeline">
+    <li class="cv-education__entry">
+      <time datetime="2023">2023–Present</time>
+      <div class="cv-education__detail">
+        <h2>PhD in Data Science</h2>
+        <p>City University of Hong Kong · Hong Kong SAR</p>
+      </div>
+    </li>
+    <li class="cv-education__entry">
+      <time datetime="2021">2021–2023</time>
+      <div class="cv-education__detail">
+        <h2>MSc in Applied Mathematics for Science and Technology</h2>
+        <p>The Hong Kong Polytechnic University · Hong Kong SAR</p>
+      </div>
+    </li>
+    <li class="cv-education__entry">
+      <time datetime="2016">2016–2020</time>
+      <div class="cv-education__detail">
+        <h2>Bachelor's degree</h2>
+        <p>Sichuan University · Financial Engineering major · Software Engineering minor</p>
+      </div>
+    </li>
+  </ol>
+</section>
 
 Publications and Working Papers
 ======
