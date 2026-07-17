@@ -53,10 +53,19 @@
 
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-weight: 400;
 
     a {
+      font-family: "Newsreader", $serif;
       font-size: $type-size-4;
+    }
+
+    .site-name__surname {
+      font-weight: 500;
+    }
+
+    .site-name__given {
+      font-weight: 400;
     }
   }
 }

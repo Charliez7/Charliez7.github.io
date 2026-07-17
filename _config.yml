@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "mint" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Yuqi Zha"
+title                    : "Zha Yuqi"
 title_separator          : "-"
-name                     : &name "Yuqi Zha"
-description              : &description "Academic website of Yuqi Zha, a PhD candidate studying reinforcement learning and robust optimization."
+name                     : &name "Zha Yuqi"
+description              : &description "Academic website of Zha Yuqi, a PhD candidate studying reinforcement learning and robust optimization."
 url                      : https://charliez7.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,7 +24,7 @@ repository               : "Charliez7/Charliez7.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Yuqi Zha"
+  name             : "Zha Yuqi"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate in Data Science"
   location         : "Hong Kong SAR"
