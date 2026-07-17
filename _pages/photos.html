@@ -5,115 +5,117 @@ permalink: /photos/
 author_profile: false
 ---
 
-<p>A collection of moments from my academic and teaching journey.</p>
-
-<div class="photo-grid">
+<div class="photo-gallery">
   {% for photo in site.data.photos %}
-    <article class="photo-card">
-      {% if photo.related_url %}
-        <a class="photo-card__image-link" href="{{ photo.related_url | relative_url }}" aria-label="View related experience: {{ photo.related_label | escape }}">
-      {% endif %}
-          <img
-            class="photo-card__image"
-            src="{{ photo.image | relative_url }}"
-            alt="{{ photo.alt | escape }}"
-            loading="lazy"
-          >
-      {% if photo.related_url %}
-        </a>
-      {% endif %}
+    <figure class="photo-gallery__item{% if forloop.first %} photo-gallery__item--featured{% endif %}">
+      <div class="photo-gallery__media">
+        <img
+          class="photo-gallery__image"
+          src="{{ photo.image | relative_url }}"
+          alt="{{ photo.alt | escape }}"
+          loading="lazy"
+        >
+      </div>
 
-      <div class="photo-card__body">
-        <p class="photo-card__meta">
+      <figcaption class="photo-gallery__caption">
+        <h2 class="photo-gallery__title">{{ photo.title }}</h2>
+        <p class="photo-gallery__meta">
           <time datetime="{{ photo.date_iso }}">{{ photo.date }}</time>
           {% if photo.location %}<span aria-hidden="true"> · </span>{{ photo.location }}{% endif %}
         </p>
-        <h2 class="photo-card__title">{{ photo.title }}</h2>
-        <p>{{ photo.description }}</p>
-        {% if photo.related_url %}
-          <a class="photo-card__related" href="{{ photo.related_url | relative_url }}">
-            Related experience: {{ photo.related_label }}
-          </a>
-        {% endif %}
-      </div>
-    </article>
+      </figcaption>
+    </figure>
   {% endfor %}
 </div>
 
 <style>
-  .photo-grid {
+  .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+    margin-top: 1rem;
   }
 
-  .photo-card {
+  .photo-gallery__item {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .photo-gallery__item--featured {
+    grid-column: 1 / -1;
+    width: min(100%, 48rem);
+    justify-self: center;
+  }
+
+  .photo-gallery__media {
     overflow: hidden;
-    border: 1px solid var(--global-border-color);
-    border-radius: 0.5rem;
-    background: var(--global-bg-color);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 0.35rem;
+    background: var(--global-border-color);
   }
 
-  .photo-card:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.12);
-  }
-
-  .photo-card__image-link {
-    overflow: hidden;
-  }
-
-  .photo-card__image-link,
-  .photo-card__image {
+  .photo-gallery__image {
     display: block;
-  }
-
-  .photo-card__image {
     width: 100%;
     aspect-ratio: 4 / 3;
     margin: 0;
     object-fit: cover;
-    transition: transform 0.35s ease;
+    transition: transform 0.45s ease;
   }
 
-  .photo-card:hover .photo-card__image {
-    transform: scale(1.025);
+  .photo-gallery__item:hover .photo-gallery__image {
+    transform: scale(1.018);
   }
 
-  .photo-card__body {
-    padding: 1rem;
+  .photo-gallery__caption {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.65rem;
   }
 
-  .photo-card__meta {
-    margin: 0 0 0.35rem;
+  .photo-gallery__title {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.35;
+  }
+
+  .photo-gallery__meta {
+    flex: 0 0 auto;
+    margin: 0;
     color: var(--global-text-color-light);
-    font-size: 0.85em;
-  }
-
-  .photo-card__title {
-    margin: 0 0 0.5rem;
-    font-size: 1.15em;
-  }
-
-  .photo-card__body > p:not(.photo-card__meta) {
-    margin: 0 0 0.75rem;
-  }
-
-  .photo-card__related {
-    font-weight: 600;
+    font-size: 0.82em;
+    white-space: nowrap;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .photo-card,
-    .photo-card__image {
+    .photo-gallery__image {
       transition: none;
     }
 
-    .photo-card:hover,
-    .photo-card:hover .photo-card__image {
+    .photo-gallery__item:hover .photo-gallery__image {
       transform: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .photo-gallery {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .photo-gallery__item--featured {
+      grid-column: auto;
+      width: 100%;
+    }
+
+    .photo-gallery__caption {
+      display: block;
+    }
+
+    .photo-gallery__meta {
+      margin-top: 0.2rem;
+      white-space: normal;
     }
   }
 </style>
