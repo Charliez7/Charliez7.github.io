@@ -52,20 +52,13 @@ author_profile: false
     overflow: hidden;
     border: 1px solid var(--global-border-color);
     border-radius: 0.5rem;
-    background:
-      linear-gradient(145deg, var(--global-glass-highlight), transparent 55%),
-      var(--global-glass-bg);
-    -webkit-backdrop-filter: saturate(160%) blur(18px);
-            backdrop-filter: saturate(160%) blur(18px);
+    background: var(--global-bg-color);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    box-shadow: inset 0 1px 0 var(--global-glass-highlight);
   }
 
   .photo-card:hover {
     transform: translateY(-0.25rem);
-    box-shadow:
-      inset 0 1px 0 var(--global-glass-highlight),
-      0 0.75rem 1.75rem var(--global-glass-shadow);
+    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.12);
   }
 
   .photo-card__image-link {

@@ -26,9 +26,6 @@
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
   border-top: 1px solid var(--global-dark-border-color);
-  -webkit-backdrop-filter: saturate(150%) blur(16px);
-          backdrop-filter: saturate(150%) blur(16px);
-  box-shadow: 0 -0.5rem 2rem var(--global-glass-shadow);
 
   footer {
     @include clearfix;

@@ -50,13 +50,6 @@ html[data-theme="dark"] {
   --global-text-color                 : #{$text};
   --global-text-color-light           : #{$text-muted};
   --global-thead-color                : #{$background-lighter};
-  --global-accent-surface             : #{rgba($primary-color, 0.12)};
-  --global-accent-surface-strong      : #{rgba($primary-color, 0.24)};
-  --global-glass-bg                   : #{rgba($background, 0.72)};
-  --global-glass-bg-strong            : #{rgba($background-light, 0.86)};
-  --global-glass-highlight            : #{rgba($primary-color, 0.12)};
-  --global-glass-shadow               : #{rgba(#000, 0.3)};
-
 }
 
 /* Footer styling for dark mode */

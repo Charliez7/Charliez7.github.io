@@ -54,13 +54,6 @@ $sidebar-screen-min-width   : 1024px;
   --global-text-color                 : #{$text};
   --global-text-color-light           : #{$text-muted};
   --global-thead-color                : #{$lighter-primary-color};
-  --global-accent-surface             : #{rgba($primary-color, 0.14)};
-  --global-accent-surface-strong      : #{rgba($primary-color, 0.28)};
-  --global-glass-bg                   : #{rgba(#fff, 0.68)};
-  --global-glass-bg-strong            : #{rgba(#fff, 0.84)};
-  --global-glass-highlight            : #{rgba(#fff, 0.52)};
-  --global-glass-shadow               : #{rgba(#40514e, 0.14)};
-
 }
 
 footer {
