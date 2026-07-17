@@ -2,23 +2,23 @@
    MINT THEME - DARK VERSION
    ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #69c7e6;
-$background                 : #162127;
-$background-light           : #20313a;
-$background-lighter        : #29414d;
-$text                      : #eef7fb;
-$text-muted                : #bdd4de;
-$link                      : $primary-color;
-$link-dark                 : mix(#fff, $link, 18%);
-$link-light                : $primary-color;
-$footer                    : rgba($primary-color, 0.12);
-$border                    : rgba($primary-color, 0.24);
-$border-light              : rgba($primary-color, 0.42);
+$primary-color              : #30e3ca;
+$background                 : #1a2421;
+$background-light           : #243430;
+$background-lighter        : #2e443f;
+$text                      : #e8f5f3;
+$text-muted                : #b8d5d1;
+$link                      : #4effd9;
+$link-dark                 : #7cffdf;
+$link-light                : #2bd4bd;
+$footer                    : rgba(#0f1614, 0.55);
+$border                    : #2e443f;
+$border-light              : #3d5950;
 
 /* Color codes used for the site */
 $danger-color               : #e74c3c;
-$info-color                 : $primary-color;
-$notice-color               : $primary-color;
+$info-color                 : #4effd9;
+$notice-color               : #30e3ca;
 $success-color              : #2ecc71;
 $warning-color              : #f39c12;
 

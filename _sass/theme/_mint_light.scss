@@ -2,27 +2,27 @@
   MINT THEME - LIGHT VERSION
   ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #69c7e6;
+$primary-color              : #11999e;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
 $lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background                 : #f4f8fa;
+$background                 : #f3f6f6;
 $background-light           : #ffffff;
-$background-lighter        : #fafdff;
-$text                      : #31464f;
-$text-muted                : #5a6f78;
-$link                      : $primary-color;
-$link-dark                 : mix(#000, $link, 18%);
-$link-light                : $primary-color;
-$footer                    : rgba($primary-color, 0.16);
-$border                    : rgba($primary-color, 0.28);
-$border-dark               : rgba($primary-color, 0.42);
+$background-lighter        : #fafbfb;
+$text                      : #40514e;
+$text-muted                : #5c6d6a;
+$link                      : #11999e;
+$link-dark                 : mix(#000, $link, 25%);
+$link-light                : mix(#fff, $link, 25%);
+$footer                    : rgba(#30e3ca, 0.14);
+$border                    : mix(#fff, #40514e, 75%);
+$border-dark               : mix(#fff, #40514e, 60%);
 
 /* Color codes used for the site */
 $danger-color               : #e74c3c;
-$info-color                 : $primary-color;
-$notice-color               : $primary-color;
+$info-color                 : #11999e;
+$notice-color               : #30e3ca;
 $success-color              : #2ecc71;
 $warning-color              : #f39c12;
 
@@ -59,11 +59,10 @@ $sidebar-screen-min-width   : 1024px;
   --global-glass-bg                   : #{rgba(#fff, 0.68)};
   --global-glass-bg-strong            : #{rgba(#fff, 0.84)};
   --global-glass-highlight            : #{rgba(#fff, 0.52)};
-  --global-glass-shadow               : #{rgba(#315d6d, 0.14)};
+  --global-glass-shadow               : #{rgba(#40514e, 0.14)};
 
 }
 
 footer {
   color: #{$text};
 }
-
