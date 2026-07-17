@@ -20,7 +20,9 @@ function updateNav() {
   // The visible list is overflowing the nav
   if ($vlinks.width() > availableSpace) {
 
-    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
+    // Keep page links together: if one does not fit, move all of them into
+    // the dropdown instead of leaving the first link visible on its own.
+    while ($vlinks.children("*:not(.persist)").length > 0) {
       // Record the width of the list
       breaks.push($vlinks.width());
 
@@ -34,25 +36,24 @@ function updateNav() {
     }
 
     // The visible list is not overflowing
-  } else {
+  } else if (breaks.length > 0 && availableSpace > breaks[0]) {
 
-    // There is space for another item in the nav
-    while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
-      // Move the item to the visible list
+    // Restore every page link only when the complete navigation fits again.
+    while ($hlinks.children().length > 0) {
       if ($vlinks_persist_tail.children().length > 0) {
         $hlinks.children().first().insertBefore($vlinks_persist_tail);
       } else {
         $hlinks.children().first().appendTo($vlinks);
       }
-      breaks.pop();
     }
+    breaks = [];
+  }
 
-    // Hide the dropdown btn if hidden list is empty
-    if (breaks.length < 1) {
-      $btn.addClass('hidden');
-      $btn.removeClass('close');
-      $hlinks.addClass('hidden');
-    }
+  // Hide the dropdown btn if hidden list is empty
+  if (breaks.length < 1) {
+    $btn.addClass('hidden');
+    $btn.removeClass('close');
+    $hlinks.addClass('hidden');
   }
 
   // Keep counter updated
