@@ -12,7 +12,7 @@ site_theme               : "mint" # The available themes options are "default", 
 title                    : "Zha Yuqi"
 title_separator          : "-"
 name                     : &name "Zha Yuqi"
-description              : &description "Academic website of Zha Yuqi, a PhD candidate studying reinforcement learning and robust optimization."
+description              : &description "Academic website of Zha Yuqi, also published as Yuqi Zha, a PhD candidate studying reinforcement learning and robust optimization."
 url                      : https://charliez7.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -146,9 +146,15 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Zha Yuqi"
+  alternate_name         : "Yuqi Zha"
+  affiliation:
+    name                 : "City University of Hong Kong"
+    url                  : "https://www.cityu.edu.hk/"
+  links:
+    - "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+    - "https://github.com/Charliez7"
 
 
 # Analytics

@@ -6,7 +6,9 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% elsif page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
@@ -86,14 +88,31 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.social %}
+{% if site.social and page.url == "/" %}
+  {% assign profile_url = seo_url | append: "/" %}
+  {% assign profile_id = profile_url | append: "#person" %}
+  {% assign profile_image = site.author.avatar | prepend: "/images/" | prepend: seo_url %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": {{ profile_url | jsonify }},
+      "mainEntity": {
+        "@type": "Person",
+        "@id": {{ profile_id | jsonify }},
+        "name": {{ site.social.name | default: site.name | jsonify }},
+        "alternateName": {{ site.social.alternate_name | jsonify }},
+        "description": {{ site.description | jsonify }},
+        "url": {{ profile_url | jsonify }},
+        "image": {{ profile_image | jsonify }},
+        "jobTitle": {{ site.author.bio | jsonify }},
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": {{ site.social.affiliation.name | jsonify }},
+          "url": {{ site.social.affiliation.url | jsonify }}
+        },
+        "sameAs": {{ site.social.links | jsonify }}
+      }
     }
   </script>
 {% endif %}
