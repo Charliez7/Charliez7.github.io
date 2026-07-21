@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About Me"
-seo_title: "Zha Yuqi (Yuqi Zha) | PhD Candidate in Data Science"
+seo_title: "Zha Yuqi (Yuqi Zha) - PhD Candidate in Data Science"
 description: "Academic profile of Zha Yuqi, also published as Yuqi Zha, a PhD candidate in Data Science at City University of Hong Kong."
 author_profile: true
 redirect_from: 
